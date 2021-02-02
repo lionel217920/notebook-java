@@ -6,7 +6,6 @@ public class Point {
 
     private int y;
 
-
     public Point() {
         this(2, 3);
         System.out.println("Point构造方法");
@@ -24,6 +23,11 @@ public class Point {
 
     {
         System.out.println("Point初始化代码块");
+    }
+
+    @Override
+    public String toString() {
+        return "(" + x + ", " + y + ")";
     }
 
     public double distance() {
