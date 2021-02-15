@@ -1,7 +1,8 @@
 package com.lionel.notebook.proxy;
 
-public class LiuDeHua implements Star {
+import com.lionel.notebook.proxy.itf.DynamicJDKService;
 
+public class DynamicJDKServiceImpl implements DynamicJDKService {
 
     @Override
     public String sing(String name) {

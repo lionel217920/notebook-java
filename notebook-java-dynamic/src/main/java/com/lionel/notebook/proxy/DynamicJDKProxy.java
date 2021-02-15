@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-public class StarProxy implements InvocationHandler {
+public class DynamicJDKProxy implements InvocationHandler {
 
     private Object target;
 
@@ -16,7 +16,9 @@ public class StarProxy implements InvocationHandler {
     }
 
     public Object CreateProxyObj() {
-        return Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), this);
+        return Proxy.newProxyInstance(target.getClass().getClassLoader(),
+                target.getClass().getInterfaces(),
+                this);
     }
 
     public Object getTarget() {
